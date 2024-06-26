@@ -113,3 +113,52 @@ var CodigosPermisos4;
     CodigosPermisos4["Acudiente"] = "acu";
 })(CodigosPermisos4 || (CodigosPermisos4 = {}));
 console.log(CodigosPermisos4);
+var miEstudiante;
+miEstudiante = {
+    nombre: "juanito",
+    hijos: 0,
+    activo: true
+};
+console.log(miEstudiante);
+//asignamos la interface a nuestra variable, y debe cumplir con lo definido
+//las interfaces sólo se pueden usar con objetos
+var miProfesor;
+miProfesor = {
+    id: 1,
+    nombre: 'jirafales',
+    curso: 'angular',
+    activo: true
+};
+console.log(miProfesor);
+// FUNCIONES
+var retornado;
+//Declaración clásica
+function miFuncion1() {
+    console.log("soy función 1");
+}
+retornado = miFuncion1();
+console.log(retornado);
+//Fn flecha
+var miFuncion2 = function () {
+    console.log("soy función 2");
+};
+retornado = miFuncion2();
+console.log(retornado);
+//Entonces si no quiero que retorne nada, sólo se ejecute
+//explicitamente digo que no hay return
+function miFuncion3() {
+    console.log("soy función 3");
+}
+miFuncion3();
+//Si queremos que retorne, debemos decir qué nos va a retornar
+function miFuncion4() {
+    return "soy función 4";
+}
+retornado = miFuncion4();
+console.log(retornado);
+//recibir parámetros -> supongamos una suma
+function miFuncion5(num1, num2) {
+    return num1 * num2;
+}
+retornado = miFuncion5(4, 5);
+console.log(retornado);
