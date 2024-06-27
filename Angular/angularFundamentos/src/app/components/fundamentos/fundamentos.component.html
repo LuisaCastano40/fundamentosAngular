@@ -1,0 +1,50 @@
+<p>fundamentos works!</p>
+
+<hr>
+
+<section>
+    <h2>Propiedades e interpolación</h2>
+
+    <!-- Características que vienen de la lógica -->
+    <!-- Las PROPIEDADES son variables dentro de un componente y pueden ser de cualquier tipo de datos -->
+     <!-- La INTERPOLACIÓN permite usar propiedades dentro de HTML -->
+    <p>Estoy utilizando el framwork {{nombreFramework}} con vase en {{nombreLenguaje}}</p>
+    <p>{{anio}}</p>
+    <p>En tu carrito tienes {{carrito.length}} elementos</p>
+</section>
+
+<section>
+
+    <h2>Directivas</h2>
+    <p>Características que permiten manipular el DOM</p>
+    <h2>Control de flujo</h2>
+    <h3>Condicionales y Ciclos</h3>
+
+    @if(isLogged){
+        <p>Holaaaa, estás loggeado</p>
+    }@else {
+        <p>Inicie sesion</p>
+    }
+
+    <p>Productos en el carro</p>
+    <ul>
+        @for(producto of carrito; track $index ){
+            <li>{{producto}}</li>
+        }
+    </ul>
+
+    <ol>
+        @for(framework of frameworks; track framework.id){
+            <li>{{framework.nombre}}</li>
+        }
+    </ol>
+
+    <!-- con *ngFor -->
+    <!-- <ul>
+        <li *ngFor="let producto of carrito; let i = index">
+          {{ producto }}
+        </li>
+      </ul> -->
+
+
+</section>
