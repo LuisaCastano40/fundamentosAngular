@@ -1,0 +1,12 @@
+<p>padre works!</p>
+
+<p>Cantidad de estudiantes es {{estudiantes.length}}</p>
+
+<!-- paso padre a hijo -->
+
+ <!-- Para recibir props del hijo al padre, debo crear un evento emisor, ese evento lo controlo con un método en mi hijo, donde en este caso estoy pasando un string -->
+
+ <!-- Por otro lado, yo, tengo un método que recibe el string del hijo, y me lo guarda en un arreglo, yo necesito que se active ese método "agregar estudiante" cuando suceda el evento emisor del hijo -->
+
+<!-- finalmente, yo capturo lo que me está mantando el hijo con $event -->
+<app-hijo colorFavorito="púrpura" (agregarEstudianteEvento)="agregarEstudiante($event)"></app-hijo>

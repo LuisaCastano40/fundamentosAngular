@@ -1,0 +1,15 @@
+.caja{
+    width: 100px;
+    height: 100px;
+    border: solid 3px;
+}
+.cvVerde{
+    background-color: green;
+}
+
+.cvAzul{
+    background-color: blue;
+}
+.cvRojo{
+    background-color: red;
+}

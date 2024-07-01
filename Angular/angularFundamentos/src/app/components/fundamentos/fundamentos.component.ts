@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { PadreComponent } from '../padre/padre.component';
 
 @Component({
   selector: 'app-fundamentos',
   standalone: true,
-  imports: [],
+  imports: [PadreComponent],
   templateUrl: './fundamentos.component.html',
   styleUrl: './fundamentos.component.css'
 })
@@ -11,11 +12,8 @@ export class FundamentosComponent {
   nombreFramework: string = "Angular";
   nombreLenguaje: string = "Typescript";
   anio: number = 4
-
   carrito: string[] = ['teclado', 'mouse'];
-
-  isLogged: boolean = false;
-
+  isLogged: boolean = true;
   frameworks: any[] = [
     {
       id: 1,
@@ -35,4 +33,30 @@ export class FundamentosComponent {
     }
 
   ];
+  colorFondo: string = 'cvVerde';
+
+  // Métodos
+  manejarClick(){
+    console.log("Hizo click");
+  }
+
+  manejarMouseover(){
+    console.log('pasó el mouse sobre la cajita');
+  }
+
+  manejarMouseDowwn(){
+    console.log('botón mouse presionado');
+  }
+  manejarMouseUp(){
+    console.log('botón mouse up');
+  }
+
+  manejarColor(){
+    console.log('down');
+    this.colorFondo = 'cvRojo';
+  }
+  manejarColor2(){
+    console.log('up');
+    this.colorFondo = 'cvAzul';
+  }
 }
