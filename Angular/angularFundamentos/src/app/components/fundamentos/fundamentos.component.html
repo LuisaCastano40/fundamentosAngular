@@ -79,3 +79,40 @@
     <h2>Pasando datos</h2>
     <app-padre></app-padre>
 </section>
+
+<hr>
+
+<section>
+    <h2>Formularios</h2>
+    <p>Hay dos tipos de formularios</p>
+
+    <div>
+        <h3>Formularios template-driven</h3>
+
+        <form>
+            <label> Framework favorito
+                <input type="text" 
+                placeholder="Escriba su framework favorito"
+                name="frameworkFavorito"
+                [(ngModel)]="frameworkFavorito1">
+            </label>
+            <button type="button" (click)="mostrarFramework()">Ver framework favorito</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <h3>Formularios reactivos</h3>
+    <!-- Forma de decirle a angular que tengo unos controles -->
+        <form [formGroup]="loging" (ngSubmit)="manejarEnvio()">
+            <input type="text" 
+            placeholder="Ingrese su nombre de usuario"
+            formControlName="usuario">
+            <input type="password" 
+            placeholder="Ingrese su contraseña"
+            formControlName="contrasena">
+            <button>Iniciar sesión</button>
+        </form>
+    </div>
+
+
+</section>

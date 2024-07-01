@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { PadreComponent } from '../padre/padre.component';
+//Directivas de formularios
+import { FormsModule } from '@angular/forms';
+//formularios reactivos (no es necesario activar control y group)
+import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-fundamentos',
   standalone: true,
-  imports: [PadreComponent],
+  imports: [PadreComponent, FormsModule, ReactiveFormsModule],
   templateUrl: './fundamentos.component.html',
   styleUrl: './fundamentos.component.css'
 })
@@ -58,5 +62,24 @@ export class FundamentosComponent {
   manejarColor2(){
     console.log('up');
     this.colorFondo = 'cvAzul';
+  }
+
+// FORMULARIOS _________________________________
+  frameworkFavorito1 : string = "";
+
+  mostrarFramework(){
+    console.log('frameworkFavorito: ', this.frameworkFavorito1 );
+  }
+
+  //reactivos
+  //creando controles y grupos
+  loging = new FormGroup({
+    usuario: new FormControl(''),
+    contrasena: new FormControl('')
+  });
+
+  //manejar envío
+  manejarEnvio(){
+    console.log('credenciales: ', this.loging.value);
   }
 }
