@@ -1,0 +1,52 @@
+<p>fundamentos2 works!</p>
+<!-- CONTROL -->
+<div [ngSwitch]="condition">
+    <span *ngSwitchCase="'valor1'">Hola soy la condicion 1</span>
+    <span *ngSwitchCase="'valor2'">Hola soy la condicion 2</span>
+    <span *ngSwitchCase="'valor3'">Hola soy la condicion 3</span>
+    <span *ngSwitchDefault="'valor3'">Hola soy la condicion defecto</span>
+</div>
+
+<!-- NGCLASS -->
+<button [ngClass]="{'active': isActive, 'inactive': !isActive}">
+    Toggle State
+  </button>
+
+<!-- FORMULARIOS -->
+ <!-- TEMPLATES DRIVEN -->
+
+ <div>
+    <h3>Formularios template driven</h3>
+    <form (ngSubmit)="enviarDatos()">
+        <label>
+            <input type="text" name="colorFavo" id="colorFav" placeholder="Escriba color Fav" [(ngModel)]="colorFavorito">
+        </label>
+        <br>
+        <label>
+            <input type="text" name="dulceFavo" id="dulceFav" placeholder="Escriba color Fav" [(ngModel)]="dulceFavorito">
+        </label>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+ </div>
+
+
+ <!-- REACTIVOS -->
+
+<!-- Form group me lo asocia a un formulario particular -->
+ <!-- FormControl name, los inputs que estaré controlando -->
+
+ <div>
+    <h3>Formularios reactivos</h3>
+
+    <form [formGroup]="login" (ngSubmit)="manejarEnvio()" >
+        <label >
+            <input type="text" name="usuario" id="usuario" formControlName="usuario">
+        </label>
+        <label >
+            <input type="text" name="contrasena" id="contrasena" formControlName="contrasena">
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+ </div>

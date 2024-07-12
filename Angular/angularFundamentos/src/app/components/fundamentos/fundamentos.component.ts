@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PadreComponent } from '../padre/padre.component';
 //Directivas de formularios
 import { FormsModule } from '@angular/forms';
@@ -8,7 +9,7 @@ import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-fundamentos',
   standalone: true,
-  imports: [PadreComponent, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, PadreComponent, FormsModule, ReactiveFormsModule],
   templateUrl: './fundamentos.component.html',
   styleUrl: './fundamentos.component.css'
 })
@@ -18,6 +19,10 @@ export class FundamentosComponent {
   anio: number = 4
   carrito: string[] = ['teclado', 'mouse'];
   isLogged: boolean = true;
+  showDiv: boolean = true;
+  condition: string = 'valor7';
+  items: string[] = ['pepito','juan'];
+
   frameworks: any[] = [
     {
       id: 1,
@@ -37,6 +42,9 @@ export class FundamentosComponent {
     }
 
   ];
+
+
+
   colorFondo: string = 'cvVerde';
 
   // Métodos
